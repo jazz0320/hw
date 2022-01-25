@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script link='index.js'></script>
+    <script>
+        function cal() {
+            n1 = document.getElementById("number_1").value;
+            const result = ((1 + Number(n1)) * Number(n1)) / 2;
+            document.querySelector('#total').value = result
+        }
+    </script>
+</head>
+
+<body>
+
+    <form>
+        <label for="">Enter number</label>
+        <input type="number" id='number_1'>
+        <button typy="submit" onclick="cal()">送出</button>
+        <br>
+        <input type='text' id='total' value=0>
+    </form>
+
+
+
+</body>
+
+</html>
