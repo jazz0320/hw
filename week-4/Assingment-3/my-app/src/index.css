@@ -1,0 +1,245 @@
+
+html, body, div,  applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+} 
+
+
+body {
+	line-height: 1;
+  margin: 0;
+}
+h1{
+  font-size: 1em;
+}
+h2 {
+  width: 100%;
+  text-align: center;
+  background-color: #808080;
+  padding: 2em 0em;
+  margin-top: 0;
+}
+h3 {
+  width: 100%;
+  font-size: 1em;
+  margin-top: 1em;
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+
+
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+  width: 70%;
+  height: 12em;
+  margin: 1em;
+  text-align: center;
+  background-color: #f5f2f2;
+}
+
+.action {
+    display: flex;
+    justify-content: center; 
+    padding-bottom: 1em;
+}    
+.button {    
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    background-color: #black;
+    color: black;
+    font-size: 1.2em;
+}
+
+header {
+  display: inline-block;
+  margin: 0;
+}
+
+.header {
+background-color: grey;
+width: 100%;
+margin-bottom: 0;
+}
+.header ul {
+margin: 0;
+padding: 0;
+list-style: none;
+overflow: hidden; 
+background-color: #fff;
+}
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;  
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin: 0;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0; 
+}
+
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+  z-index:999
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+  
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  min-height: 100%;
+  min-width: 30%;
+  position: fixed ;
+  right: 0%;
+  top: 0;
+  background-color: white;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+  }
+  
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+
+@media only screen 
+and (min-width: 1200px) {
+    .box {
+        max-width: 800px;
+    }
+}  
+
+@media only screen 
+and (min-width: 800px) {
+  .header li {
+    float: left;
+    background-color: grey;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+
+} 
+
+
+@media only screen 
+and (min-width: 500px) {
+  
+    .flexbox {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .box {
+        width: 40%;
+    }
+}
+
+
+
